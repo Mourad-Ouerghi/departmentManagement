@@ -10,7 +10,7 @@ import com.example.departmentManagement.repository.StudentRepository;
 public class StudentService {
     @Autowired
     private StudentRepository studentRepo;
-    public String createStudent(String name,String email,String address,Integer age,String gender)
+    public String createStudent( )
     {
         Student student = new Student(name,email,age,gender,address);
         Student student = studentRepo.save(student);
