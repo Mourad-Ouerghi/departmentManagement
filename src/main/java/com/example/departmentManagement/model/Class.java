@@ -23,4 +23,10 @@ public class Class {
     private Integer requiredNumberOfHours;
     private String name;
     private String description;
+    public Class(Integer numberOfHoursTeached, Integer requiredNumberOfHours, String name, String description) {
+        this.numberOfHoursTeached = numberOfHoursTeached;
+        this.requiredNumberOfHours = requiredNumberOfHours;
+        this.name = name;
+        this.description = description;
+    }
 }

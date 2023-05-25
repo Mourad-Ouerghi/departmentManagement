@@ -20,4 +20,9 @@ public class Department {
     private Long departmentId;
     private String name;
     private String location;
+    public Department(String name, String location)
+    {
+        this.name = name;
+        this.location = location;
+    }
 }
