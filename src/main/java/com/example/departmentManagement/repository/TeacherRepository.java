@@ -6,6 +6,6 @@ import com.example.departmentManagement.model.Teacher;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TeacherRepository extends CrudRepository<Teacher, String> {
+public interface TeacherRepository extends CrudRepository<Teacher, Long> {
 
 }

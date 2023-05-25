@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 public class AdministrationStaff {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String adminStaffId;
+    private Long adminStaffId;
     private String name;
     private String email;
     private String gender;

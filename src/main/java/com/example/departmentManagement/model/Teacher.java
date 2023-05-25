@@ -1,6 +1,5 @@
 package com.example.departmentManagement.model;
 
-import org.springframework.boot.autoconfigure.amqp.RabbitConnectionDetails.Address;
 
 
 import jakarta.persistence.Entity;
@@ -18,10 +17,10 @@ import lombok.NoArgsConstructor;
 public class Teacher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String teacherId;
+    private Long teacherId;
     private String name;
     private String email;
     private Integer age;
     private String gender;
-    private Address address;
+    private String address;
 }
