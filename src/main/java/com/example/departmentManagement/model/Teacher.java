@@ -23,4 +23,11 @@ public class Teacher {
     private Integer age;
     private String gender;
     private String address;
+    public Teacher(String name, String email, Integer age, String gender, String address) {
+        this.name = name;
+        this.email = email;
+        this.age = age;
+        this.gender = gender;
+        this.address = address;
+    }
 }
