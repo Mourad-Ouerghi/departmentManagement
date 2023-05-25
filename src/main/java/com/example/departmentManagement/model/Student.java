@@ -1,9 +1,13 @@
 package com.example.departmentManagement.model;
 
+import java.util.Set;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -29,4 +33,11 @@ public class Student {
         this.gender = gender;
         this.address = address;
     }
+    @ManyToMany
+    @JoinTable(
+        name="classDetails",
+        joinColumns = @JoinColumn(name="studentId"),
+        inverseJoinColumns = @JoinColumn(name="classId")
+    )
+    Set<Class> enrolledClasses;
 }

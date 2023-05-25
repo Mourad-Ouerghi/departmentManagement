@@ -27,7 +27,7 @@ public class ClassController {
     @PutMapping("/updateClass")
     public String updateClass(@RequestBody Class c)
     {
-        return classService.updateClass(c.getClassId(),c.getNumberOfHoursTeached(),c.getRequiredNumberOfHours(),c.getDescription(),c.getName());
+        return classService.updateClass(c.getClassId(),c.getNumberOfHoursTeached(),c.getRequiredNumberOfHours(),c.getDescription(),c.getName(),c.getEnrolls());
     }
     @GetMapping("/getClass/{classId}")
     public Optional<Class> getClassById(@PathVariable(name = "classId")Long classId) {

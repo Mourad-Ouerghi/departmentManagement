@@ -2,6 +2,8 @@ package com.example.departmentManagement.model;
 
 
 
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,6 +19,7 @@ import lombok.NoArgsConstructor;
 public class Teacher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="teacherId")
     private Long teacherId;
     private String name;
     private String email;

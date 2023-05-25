@@ -27,7 +27,7 @@ public class StudentController {
     @PutMapping("/updateStudent")
     public String updateStudent(@RequestBody Student student)
     {
-        return studentService.updateStudent(student.getStudentId(),student.getName(),student.getEmail(),student.getAddress(), student.getAge(),student.getGender());
+        return studentService.updateStudent(student.getStudentId(),student.getName(),student.getEmail(),student.getAddress(), student.getAge(),student.getGender(),student.getEnrolledClasses());
     }
     @GetMapping("/getStudent/{studentId}")
     public Optional<Student> getStudentById(@PathVariable(name = "studentId")Long studentId) {
